@@ -57,7 +57,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdWxpbyIsImV4cCI6MTYxOTY1MDE0MCwiaWF0IjoxNjE5NjMyMTQwfQ.KtsxBtTis4HogM7e6P-fd-rk1DHcKmX-mela0-9tOffLr5TfriaMvcr0C1e96n0_TVnlQT_egngWic1_EvxOuA",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdWxpbyIsImV4cCI6MTYxOTY1MTU2NiwiaWF0IjoxNjE5NjMzNTY2fQ.jX3W9Jp1CMbFPF5WK-ZhBJm77oUQN9ohgvDf4S05Py1D8o3_FgrgJ6W0jXsD99jPxJSJTvXJm1IkmglMEO0Z5A",
 						"type": "text"
 					}
 				],
@@ -131,12 +131,12 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdWxpbyIsImV4cCI6MTYxOTY1MDE0MCwiaWF0IjoxNjE5NjMyMTQwfQ.KtsxBtTis4HogM7e6P-fd-rk1DHcKmX-mela0-9tOffLr5TfriaMvcr0C1e96n0_TVnlQT_egngWic1_EvxOuA",
-						"type": "text"
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdWxpbyIsImV4cCI6MTYxOTY1MDE0MCwiaWF0IjoxNjE5NjMyMTQwfQ.KtsxBtTis4HogM7e6P-fd-rk1DHcKmX-mela0-9tOffLr5TfriaMvcr0C1e96n0_TVnlQT_egngWic1_EvxOuA"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8090/currency/exchange-rate/15.5/PEN/DOL",
+					"raw": "http://localhost:8090/currency/exchange-rate/all",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -145,9 +145,7 @@
 					"path": [
 						"currency",
 						"exchange-rate",
-						"15.5",
-						"PEN",
-						"DOL"
+						"all"
 					]
 				}
 			},
@@ -211,7 +209,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"rate\": 5.5,\r\n    \"monedaOrigen\": \"PEN\",\r\n    \"monedaDestino\": \"DOL\"\r\n}",
+					"raw": "{\r\n    \"rate\":8.5,\r\n    \"monedaOrigen\": \"PEN\",\r\n    \"monedaDestino\": \"DOL\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
