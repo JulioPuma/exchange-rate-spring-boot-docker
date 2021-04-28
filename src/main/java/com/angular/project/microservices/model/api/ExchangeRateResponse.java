@@ -14,6 +14,6 @@ import java.math.BigDecimal;
 public class ExchangeRateResponse extends ExchangeRate {
 
     private BigDecimal montoTipoCambio;
-    private Float tipoCambio;
+    private BigDecimal tipoCambio;
 
 }

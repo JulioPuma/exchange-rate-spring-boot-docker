@@ -1,14 +1,17 @@
 package com.angular.project.microservices.model.dto;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.sql.Date;
 
 @Entity
 @Table(name = "exchange_rate_t002")
 @Getter
+@Setter
 @ToString
 public class ExchangeRateDto {
     @Id
@@ -16,7 +19,7 @@ public class ExchangeRateDto {
     private Integer id;
 
     @Column(name = "exchange_rate")
-    private Float exchangeRate;
+    private BigDecimal exchangeRate;
 
     @Column(name = "date")
     private Date date;

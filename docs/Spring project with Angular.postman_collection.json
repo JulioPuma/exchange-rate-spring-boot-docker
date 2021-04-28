@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "be058707-4cad-4d49-b2bb-3b17410b0f52",
+		"name": "Spring project with Angular",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ExchangeRate",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "channel.scrm.default",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "d22c992d-d364-4261-8d94-f4cdd3e423ff",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "2afb65cd-3fc1-4d2e-96b8-adc6c0560026",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://int.apisdevbcp.com/auth/oauth/v2/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdWxpbyIsImV4cCI6MTYxOTY1MDE0MCwiaWF0IjoxNjE5NjMyMTQwfQ.KtsxBtTis4HogM7e6P-fd-rk1DHcKmX-mela0-9tOffLr5TfriaMvcr0C1e96n0_TVnlQT_egngWic1_EvxOuA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/currency/exchange-rate/15.5/PEN/DOL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"currency",
+						"exchange-rate",
+						"15.5",
+						"PEN",
+						"DOL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExchangeRate All",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "channel.scrm.default",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "d22c992d-d364-4261-8d94-f4cdd3e423ff",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "2afb65cd-3fc1-4d2e-96b8-adc6c0560026",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://int.apisdevbcp.com/auth/oauth/v2/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdWxpbyIsImV4cCI6MTYxOTY1MDE0MCwiaWF0IjoxNjE5NjMyMTQwfQ.KtsxBtTis4HogM7e6P-fd-rk1DHcKmX-mela0-9tOffLr5TfriaMvcr0C1e96n0_TVnlQT_egngWic1_EvxOuA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/currency/exchange-rate/15.5/PEN/DOL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"currency",
+						"exchange-rate",
+						"15.5",
+						"PEN",
+						"DOL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExchangeRate update",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "channel.scrm.default",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "d22c992d-d364-4261-8d94-f4cdd3e423ff",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "2afb65cd-3fc1-4d2e-96b8-adc6c0560026",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://int.apisdevbcp.com/auth/oauth/v2/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKdWxpbyIsImV4cCI6MTYxOTY1MDE0MCwiaWF0IjoxNjE5NjMyMTQwfQ.KtsxBtTis4HogM7e6P-fd-rk1DHcKmX-mela0-9tOffLr5TfriaMvcr0C1e96n0_TVnlQT_egngWic1_EvxOuA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rate\": 5.5,\r\n    \"monedaOrigen\": \"PEN\",\r\n    \"monedaDestino\": \"DOL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/currency/exchange-rate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"currency",
+						"exchange-rate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Julio\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

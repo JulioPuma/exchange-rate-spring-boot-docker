@@ -9,4 +9,6 @@ public interface ExchangeRateRepository extends JpaRepository<ExchangeRateDto,In
     @Query("SELECT e FROM ExchangeRateDto e WHERE e.currencyBase = ?1 and e.currencyDestiny = ?2")
     ExchangeRateDto findByNames(CurrencyDto currencyOrigen, CurrencyDto currencyDestino);
 
+
+
 }
