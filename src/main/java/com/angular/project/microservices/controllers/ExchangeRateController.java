@@ -1,6 +1,7 @@
 package com.angular.project.microservices.controllers;
 
 import com.angular.project.microservices.model.api.ExchangeRate;
+import com.angular.project.microservices.model.api.ExchangeRateNew;
 import com.angular.project.microservices.model.api.ExchangeRateResponse;
 import com.angular.project.microservices.model.api.ExchangeRateUpdate;
 import com.angular.project.microservices.model.dto.ExchangeRateDto;
@@ -43,5 +44,12 @@ public class ExchangeRateController {
   public Observable<ExchangeRateDto> listaTiposCambio(
   ) {
     return exchangeRateInterface.listaTiposCambio();
+  }
+
+  @PostMapping("exchange-rate/new")
+  public Completable nuevoTipoCambio(
+          @RequestBody ExchangeRateUpdate exchangeRateNew
+  ) {
+    return exchangeRateInterface.nuevoTipoCambio(exchangeRateNew);
   }
 }

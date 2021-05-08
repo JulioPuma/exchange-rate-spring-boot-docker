@@ -3,6 +3,7 @@ package com.angular.project.microservices.services.exchangerate;
 import com.angular.project.microservices.dao.CurrencyRepository;
 import com.angular.project.microservices.dao.ExchangeRateRepository;
 import com.angular.project.microservices.model.api.ExchangeRate;
+import com.angular.project.microservices.model.api.ExchangeRateNew;
 import com.angular.project.microservices.model.api.ExchangeRateResponse;
 import com.angular.project.microservices.model.api.ExchangeRateUpdate;
 import com.angular.project.microservices.model.dto.CurrencyDto;
@@ -16,6 +17,8 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.sql.Date;
+import java.util.Calendar;
 
 @Service
 @AllArgsConstructor
@@ -59,5 +62,40 @@ public class ExchangeRateServiceImpl implements ExchangeRateInterface {
     @Override
     public Observable<ExchangeRateDto> listaTiposCambio() {
         return Observable.fromIterable(exchangeRateRepository.findAll());
+    }
+
+    @Override
+    public Completable nuevoTipoCambio(ExchangeRateUpdate exchangeRateNew) {
+
+
+        CurrencyDto currencyDtoauxOrigen = currencyRepository.findCurrencyDtoByName(exchangeRateNew.getMonedaOrigen());
+
+                if(currencyDtoauxOrigen == null){
+                    currencyDtoauxOrigen = new CurrencyDto();
+                    currencyDtoauxOrigen.setName(exchangeRateNew.getMonedaOrigen());
+                    currencyDtoauxOrigen = currencyRepository.save(currencyDtoauxOrigen);
+                }
+
+        CurrencyDto currencyDtoauxDestino = currencyRepository.findCurrencyDtoByName(exchangeRateNew.getMonedaDestino());
+
+                if(currencyDtoauxDestino == null){
+                    currencyDtoauxDestino = new CurrencyDto();
+                    currencyDtoauxDestino.setName(exchangeRateNew.getMonedaDestino());
+                    currencyDtoauxDestino = currencyRepository.save(currencyDtoauxDestino);
+                }
+
+
+
+
+
+        ExchangeRateDto exchangeRateDto = new ExchangeRateDto();
+        exchangeRateDto.setExchangeRate(exchangeRateNew.getRate());
+        exchangeRateDto.setCurrencyBase(currencyDtoauxOrigen);
+        exchangeRateDto.setCurrencyDestiny(currencyDtoauxDestino);
+        //exchangeRateDto.setDate(new Date().toLocalDate());
+
+
+        exchangeRateRepository.save(exchangeRateDto);
+        return Completable.complete();
     }
 }
